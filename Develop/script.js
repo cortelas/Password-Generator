@@ -1,5 +1,10 @@
 // Assignment code here
+function generatePassword(){
+  // Declaring valic characters
+  var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+  var passLength = prompt("Please enter your desired password length", "8");
 
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
