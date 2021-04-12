@@ -1,8 +1,16 @@
 // Assignment code here
 function generatePassword(){
   // Declaring valic characters
-  var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+  var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
   var passLength = prompt("Please enter your desired password length", "8");
+  var passStr = "";
+
+  for (let index = 0; index < passLength; index++) {
+    passStr += chars.charAt(Math.floor(Math.random() * chars.length));
+    
+  }
+
+  return passStr;
 
 }
 
