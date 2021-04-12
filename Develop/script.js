@@ -3,7 +3,18 @@ function generatePassword(){
   var passStr = "";
 
   // Finding password length
-  var passLength = prompt("Please enter your desired password length. Must be between 8 and 128", "8");
+  var notValidLength = true;
+  var passLength = "";
+
+  // Repeats until a valid length is given
+  do{
+    passLength = prompt("Please enter your desired password length. Must be between 8 and 128", "8");
+    if(passLength >= 8 && passLength <= 128){
+      notValidLength = false;
+    }
+  }
+  while (notValidLength)
+
 
   // Declaring valid characters
   //var allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
