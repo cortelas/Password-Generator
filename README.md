@@ -3,8 +3,8 @@ This application generates a password from a series of prompts. The application 
 
 ## Application
 
-* Open [index.html](Develop/index.html) in your browser to see the completed application.
+* Open [index.html](Develop/index.html) in your browser to see the deployed application.
 
-* Open the [Screenshot](Develop/assets/img/screenshot.png) to see a screenshot of the appliaction generating a password.
+* Open the [Screenshot](Develop/assets/img/screenshot.png) to see a screenshot of the appliaction generating a password of 40 length and all character types.
 
-* Use the link [https://cortelas.github.io/Password-Generator/](https://cortelas.github.io/Password-Generator/) to see the deployed application.
+* Use the link [https://cortelas.github.io/Password-Generator/](https://cortelas.github.io/Password-Generator/) to see the GitHub pages.
