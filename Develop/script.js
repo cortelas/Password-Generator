@@ -3,7 +3,7 @@ function generatePassword(){
   var passStr = "";
 
   // Finding password length
-  var passLength = prompt("Please enter your desired password length", "8");
+  var passLength = prompt("Please enter your desired password length. Must be between 8 and 128", "8");
 
   // Declaring valid characters
   //var allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
@@ -16,23 +16,22 @@ function generatePassword(){
   var charType = prompt("please enter the character types you want in your password", "lowercase, uppercase, numeric, special");
   var chars = "";
 
-  if(charType.includes("lowercase")){
+  if(charType.toLowerCase().includes("lowercase")){
     chars += charLower;
   }
-  if(charType.includes("uppercase")){
+  if(charType.toLowerCase().includes("uppercase")){
     chars += charUpper;
   }
-  if(charType.includes("numeric")){
+  if(charType.toLowerCase().includes("numeric")){
     chars += charNumeric;
   }
-  if(charType.includes("special")){
+  if(charType.toLowerCase().includes("special")){
     chars += charSpecial;
   }
 
   // Builds password from valid characters
   for (let index = 0; index < passLength; index++) {
     passStr += chars.charAt(Math.floor(Math.random() * chars.length));
-    
   }
 
   return passStr;
