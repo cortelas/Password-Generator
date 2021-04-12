@@ -17,16 +17,28 @@ function generatePassword(){
 
 
   // Declaring valid characters
-  //var allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+  // var allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
   var charLower = "abcdefghijklmnopqrstuvwxyz";
   var charUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var charNumeric = "0123456789";
   var charSpecial = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
-
-  // Finding desired character types
-  var charType = prompt("please enter the character types you want in your password", "lowercase, uppercase, numeric, special");
   var chars = "";
 
+  // Finding desired character types
+
+  var noValidType = true;
+  var charType = "";
+
+  // Repeats until valid type(s) is/are given
+  do{
+    charType = prompt("please enter the character type(s) you want in your password", "lowercase, uppercase, numeric, special");
+    if(charType.toLowerCase().includes("lowercase") || charType.toLowerCase().includes("uppercase") || charType.toLowerCase().includes("numeric") || charType.toLowerCase().includes("special")){
+      noValidType = false;
+    }
+  }
+  while (noValidType)
+
+  // Adds valid character types to the master string
   if(charType.toLowerCase().includes("lowercase")){
     chars += charLower;
   }
